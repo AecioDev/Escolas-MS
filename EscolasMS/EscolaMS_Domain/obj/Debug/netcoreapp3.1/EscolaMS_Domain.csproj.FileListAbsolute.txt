@@ -1,0 +1,9 @@
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\bin\Debug\netcoreapp3.1\EscolaMS_Domain.deps.json
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\bin\Debug\netcoreapp3.1\EscolaMS_Domain.dll
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\bin\Debug\netcoreapp3.1\EscolaMS_Domain.pdb
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\obj\Debug\netcoreapp3.1\EscolaMS_Domain.csprojAssemblyReference.cache
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\obj\Debug\netcoreapp3.1\EscolaMS_Domain.AssemblyInfoInputs.cache
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\obj\Debug\netcoreapp3.1\EscolaMS_Domain.AssemblyInfo.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\obj\Debug\netcoreapp3.1\EscolaMS_Domain.csproj.CoreCompileInputs.cache
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\obj\Debug\netcoreapp3.1\EscolaMS_Domain.dll
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Domain\obj\Debug\netcoreapp3.1\EscolaMS_Domain.pdb
