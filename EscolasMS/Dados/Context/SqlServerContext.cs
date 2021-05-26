@@ -15,7 +15,7 @@ namespace EscolaMS_Dados.Context
         protected override void OnModelCreating(ModelBuilder mb)
         {
             mb.HasDefaultSchema("dbo");
-            
+                        
             mb.ApplyConfiguration(new AlunoConf());
             mb.ApplyConfiguration(new ResponsavelConf());
 

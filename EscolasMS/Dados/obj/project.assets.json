@@ -5814,25 +5814,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aecio\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\aecio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projetos C#\\Teste SGI\\Escolas-MS\\EscolasMS\\Dados\\EscolaMS_Dados.csproj",
+      "projectUniqueName": "D:\\C#\\Escolas-MS\\EscolasMS\\Dados\\EscolaMS_Dados.csproj",
       "projectName": "EscolaMS_Dados",
-      "projectPath": "E:\\Projetos C#\\Teste SGI\\Escolas-MS\\EscolasMS\\Dados\\EscolaMS_Dados.csproj",
+      "projectPath": "D:\\C#\\Escolas-MS\\EscolasMS\\Dados\\EscolaMS_Dados.csproj",
       "packagesPath": "C:\\Users\\aecio\\.nuget\\packages\\",
-      "outputPath": "E:\\Projetos C#\\Teste SGI\\Escolas-MS\\EscolasMS\\Dados\\obj\\",
+      "outputPath": "D:\\C#\\Escolas-MS\\EscolasMS\\Dados\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
         "C:\\Users\\aecio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5843,9 +5838,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Projetos C#\\Teste SGI\\Escolas-MS\\EscolasMS\\EscolaMS_Domain\\EscolaMS_Domain.csproj": {
-              "projectPath": "E:\\Projetos C#\\Teste SGI\\Escolas-MS\\EscolasMS\\EscolaMS_Domain\\EscolaMS_Domain.csproj"
+            "D:\\C#\\Escolas-MS\\EscolasMS\\EscolaMS_Domain\\EscolaMS_Domain.csproj": {
+              "projectPath": "D:\\C#\\Escolas-MS\\EscolasMS\\EscolaMS_Domain\\EscolaMS_Domain.csproj"
             }
           }
         }
@@ -5858,6 +5854,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -5889,7 +5886,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
