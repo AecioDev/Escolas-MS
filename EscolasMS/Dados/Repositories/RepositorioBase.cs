@@ -10,24 +10,22 @@ namespace EscolaMS_Dados.Repositories
 {
     public class RepositorioBase<TEntity> : IDisposable, IRepositorioBase<TEntity> where TEntity : class
     {
-        private DbContext _Db;
+        public readonly SqlServerContext _Db;
 
-        //Aqui eu crio o CRUD Padrão utilizado por Todas as Entidades.
-
-        public RepositorioBase(DbContext context)
+        public RepositorioBase(SqlServerContext dbContext)
         {
-            _Db = context;
-        }
-
-        public void Update(TEntity obj)
-        {
-            _Db.Entry(obj).State = EntityState.Modified;
-            _Db.SaveChanges();
+            _Db = dbContext;
         }
 
         public void Add(TEntity obj)
         {
             _Db.Set<TEntity>().Add(obj);
+            _Db.SaveChanges();
+        }
+
+        public void Update(TEntity obj)
+        {
+            _Db.Entry(obj).State = EntityState.Modified;
             _Db.SaveChanges();
         }
 

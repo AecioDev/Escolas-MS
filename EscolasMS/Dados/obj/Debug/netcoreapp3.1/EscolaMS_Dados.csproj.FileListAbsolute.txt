@@ -13,3 +13,18 @@ E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\Esco
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Dados.pdb
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.dll
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.pdb
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.csprojAssemblyReference.cache
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.AssemblyInfoInputs.cache
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.AssemblyInfo.cs
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.csproj.CoreCompileInputs.cache
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.dll
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.pdb
+D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Dados.deps.json
+D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Dados.runtimeconfig.json
+D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Dados.runtimeconfig.dev.json
+D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Dados.dll
+D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Dados.pdb
+D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Domain.dll
+D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Domain.pdb
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.csproj.CopyComplete
+D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.genruntimeconfig.cache

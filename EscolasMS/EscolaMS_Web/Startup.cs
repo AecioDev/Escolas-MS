@@ -11,6 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
+using EscolaMS_Domain.Entities;
+using EscolaMS_Web.ViewModels;
+using AutoMapper;
+using EscolaMS_Domain.Interfaces;
+using EscolaMS_Dados.Repositories;
 
 namespace EscolaMS_Web
 {
@@ -29,11 +34,22 @@ namespace EscolaMS_Web
             services.AddControllersWithViews();
             
             services.AddDbContext<SqlServerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            var config = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<AlunoViewModel, Aluno>();
+            });
+
+            IMapper mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
+            services.AddScoped<IResponsavelRepositorio, ResponsavelRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
+        { 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
