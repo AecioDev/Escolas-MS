@@ -11,7 +11,7 @@ namespace EscolaMS_Domain.Entities
         public DateTime DataNascimento { get; set; }
         public string CPF { get; set; }
 
-        public List<Aluno> Alunos { get; set; }
+        public virtual IEnumerable<Aluno> Alunos { get; set; }
     }
 }
 

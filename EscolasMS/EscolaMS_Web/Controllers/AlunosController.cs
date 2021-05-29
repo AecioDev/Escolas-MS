@@ -55,6 +55,30 @@ namespace EscolaMS_Web.Controllers
         [HttpPost]
         public ActionResult Create(AlunoViewModel aluno)
         {
+            ViewBag.Responsaveis = _ResponsavelDb.GetAll().Select(r => new SelectListItem()
+            {
+                Text = r.Nome,
+                Value = r.ResponsavelId.ToString()
+            }).ToList();
+
+            //Valida Idade Mínima
+            var AnoIdade = aluno.DataNascimento.Year;
+            if(DateTime.Now.Year - AnoIdade < 6)
+            {
+                ModelState.AddModelError("DataNascimento", "O Aluno deve ter no mínimo 6 anos de idade!");
+            } 
+            else if (DateTime.Now.Year - AnoIdade < 18 && aluno.ResponsavelId == null)
+            {
+                ModelState.AddModelError("ResponsavelId", "Para aluno menor de 18 anos o Responsável deve ser informado!");
+            }
+
+            //Valida o Documento Informado
+            if (string.IsNullOrEmpty(aluno.NumeroCertidaoNova) && string.IsNullOrEmpty(aluno.CPF))
+            {
+                ModelState.AddModelError("NumeroCertidaoNova", "Informe o número da Certidão Nova ou do CPF do Aluno!");
+                ModelState.AddModelError("CPF", "Informe o número do CPF ou da Certidão Nova do Aluno!");
+            }
+
             if (ModelState.IsValid)
             {
                 var alunoDomain = _mapper.Map<AlunoViewModel, Aluno>(aluno);

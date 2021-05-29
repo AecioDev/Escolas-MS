@@ -30,7 +30,9 @@ namespace EscolaMS_Dados.Repositories
 
         public IEnumerable<Aluno> GetAll()
         {
-            return _Db.Set<Aluno>().ToList();
+            return _Db.Set<Aluno>()
+                .Include(r => r.Responsavel)
+                .ToList();
         }
 
         public Aluno GetById(int id)
