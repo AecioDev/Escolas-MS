@@ -11,7 +11,7 @@ namespace EscolaMS_Domain.Entities
         public DateTime DataNascimento { get; set; }
         public string NumeroCertidaoNova { get; set; }
         public string CPF { get; set; }
-        public int ResponsavelId { get; set; }
+        public int? ResponsavelId { get; set; }
 
         public virtual Responsavel Responsavel { get; set; }
 

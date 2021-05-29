@@ -1,4 +1,3 @@
-E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.csprojAssemblyReference.cache
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.AssemblyInfoInputs.cache
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.AssemblyInfo.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.csproj.CoreCompileInputs.cache
@@ -28,3 +27,4 @@ D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Domain.dll
 D:\C#\Escolas-MS\EscolasMS\Dados\bin\Debug\netcoreapp3.1\EscolaMS_Domain.pdb
 D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.csproj.CopyComplete
 D:\C#\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.genruntimeconfig.cache
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\Dados\obj\Debug\netcoreapp3.1\EscolaMS_Dados.csproj.AssemblyReference.cache

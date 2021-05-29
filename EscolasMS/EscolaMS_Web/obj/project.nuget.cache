@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rIKf62fNdIDYG/th+Sl99HY2KtMWNX8o4W9wnhNittAgAubGmaScuyR1Z649DP/lkrY2XKNTporI7rJf4hJoUg==",
+  "dgSpecHash": "tXoh1NSkMAHuoZUSK2rBFdQamKyCkEGrrFQGwB/4Yr57VLqgTMPKxt9b9zXmHVGIOuWB5uJMi09AWI+bAEMifQ==",
   "success": true,
-  "projectFilePath": "D:\\C#\\Escolas-MS\\EscolasMS\\EscolaMS_Web\\EscolaMS_Web.csproj",
+  "projectFilePath": "E:\\Projetos C#\\Teste SGI\\Escolas-MS\\EscolasMS\\EscolaMS_Web\\EscolaMS_Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aecio\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\aecio\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -160,8 +160,7 @@
     "C:\\Users\\aecio\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\aecio\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\aecio\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\aecio\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\aecio\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+    "C:\\Users\\aecio\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

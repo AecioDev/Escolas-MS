@@ -1,4 +1,7 @@
-﻿using AutoMapper;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using AutoMapper;
 using EscolaMS_Domain.Entities;
 using EscolaMS_Domain.Interfaces;
 using EscolaMS_Web.ViewModels;
@@ -7,73 +10,63 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Linq;
-using System;
-using System.Threading.Tasks;
 
 namespace EscolaMS_Web.Controllers
 {
-    public class AlunosController : Controller
+    public class ResponsavelController : Controller
     {
         IMapper _mapper;
-        private readonly IAlunoRepositorio _alunoDb;
         private readonly IResponsavelRepositorio _ResponsavelDb;
-        public AlunosController(IMapper mapper, IAlunoRepositorio alunoRepositorio,
-            IResponsavelRepositorio ResponsavelDb)
+        public ResponsavelController(IMapper mapper, IResponsavelRepositorio ResponsavelDb)
         {
             _mapper = mapper;
-            _alunoDb = alunoRepositorio;
             _ResponsavelDb = ResponsavelDb;
         }
 
-        // GET: AlunosController
+        // GET: ResponsavelController
         public ActionResult Index()
         {
-            var alunos = _alunoDb.GetAll().ToList();
-            var viewAlunos = _mapper.Map<IEnumerable<Aluno>, IEnumerable<AlunoViewModel>>(alunos);
-            return View(viewAlunos);
+            var responsaveis = _ResponsavelDb.GetAll().ToList();
+            var viewResponsaveis = _mapper.Map<IEnumerable<Responsavel>, IEnumerable<ResponsavelViewModel>>(responsaveis);
+            return View(viewResponsaveis);
         }
 
-        // GET: AlunosController/Details/5
+        // GET: ResponsavelController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: AlunosController/Create
+        // GET: ResponsavelController/Create
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.Responsaveis = _ResponsavelDb.GetAll().Select(r => new SelectListItem()
-            {
-                Text = r.Nome,
-                Value = r.ResponsavelId.ToString()
-            }).ToList();                
             return View();
         }
 
-        // POST: AlunosController/Create
+        // POST: ResponsavelController/Create
         [HttpPost]
-        public ActionResult Create(AlunoViewModel aluno)
+        public ActionResult Create(ResponsavelViewModel responsavel)
         {
             if (ModelState.IsValid)
             {
-                var alunoDomain = _mapper.Map<AlunoViewModel, Aluno>(aluno);
-                _alunoDb.Add(alunoDomain);
+                var responsavelDomain = _mapper.Map<ResponsavelViewModel, Responsavel>(responsavel);
+                _ResponsavelDb.Add(responsavelDomain);
 
                 TempData["MSG_S"] = "Cadastro realizado com Sucesso!";
                 return RedirectToAction(nameof(Index));
             }
 
-            return View(aluno);
+            return View(responsavel);
         }
 
-        // GET: AlunosController/Edit/5
+        // GET: ResponsavelController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: AlunosController/Edit/5
+        // POST: ResponsavelController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -88,13 +81,13 @@ namespace EscolaMS_Web.Controllers
             }
         }
 
-        // GET: AlunosController/Delete/5
+        // GET: ResponsavelController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: AlunosController/Delete/5
+        // POST: ResponsavelController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)

@@ -9,6 +9,7 @@ namespace EscolaMS_Web.ViewModels
     public class AlunoViewModel
     {
         [Key]
+        [Display(Name = "Código")]
         public int AlunoId { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens), ErrorMessageResourceName = "MSG_E001")]
@@ -30,7 +31,7 @@ namespace EscolaMS_Web.ViewModels
         public string CPF { get; set; }
 
         [Display(Name = "Responsável")]
-        public int ResponsavelId { get; set; }
+        public int? ResponsavelId { get; set; }
 
         public virtual ResponsavelViewModel Responsavel { get; set; }
     }

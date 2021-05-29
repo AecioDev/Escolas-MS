@@ -38,6 +38,9 @@ namespace EscolaMS_Web
             var config = new AutoMapper.MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<AlunoViewModel, Aluno>();
+                cfg.CreateMap<Aluno, AlunoViewModel>();
+                cfg.CreateMap<ResponsavelViewModel, Responsavel>();
+                cfg.CreateMap<Responsavel, ResponsavelViewModel>();
             });
 
             IMapper mapper = config.CreateMapper();

@@ -1,56 +1,78 @@
-﻿@model EscolaMS_Web.ViewModels.AlunoViewModel
+﻿@model AlunoViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastro de Aluno";
 }
 
-<h1>Create</h1>
+<h1>Cadastro</h1>
 
-<h4>AlunoViewModel</h4>
+<h4>Alunos</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="AlunoId" class="control-label"></label>
-                <input asp-for="AlunoId" class="form-control" />
-                <span asp-validation-for="AlunoId" class="text-danger"></span>
+<form asp-controller="Alunos" asp-action="Create" method="post">
+    <main role="main">
+        <section class="container" style="margin-top: 50px">
+            <div class="row">
+                <aside class="col-sm-6">
+                    <h3 class="subtitle-doc">Cadastro de Aluno </h3>
+                    <div>
+                        <div class="card">
+                            <article class="card-body">
+                                @if (TempData["MSG_S"] != null)
+                                {
+                                    <p class="alert alert-success">@TempData["MSG_S"]</p>
+                                }
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <label asp-for="Nome"></label>
+                                        <input asp-for="Nome" type="text" class="form-control" placeholder="Nome Completo">
+                                        <span asp-validation-for="Nome" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <label asp-for="DataNascimento" class="control-label"></label>                                        
+                                        <input asp-for="DataNascimento" class="form-control" type="date" placeholder="dd/MM/aaaa">
+                                        <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                                    </div>
+                                    <div class="col form-group">
+                                        <label asp-for="CPF" class="control-label"></label>
+                                        <input asp-for="CPF" class="form-control" placeholder="">
+                                        <span asp-validation-for="CPF" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col form-group">
+                                        <label asp-for="NumeroCertidaoNova" class="control-label"></label>
+                                        <input asp-for="NumeroCertidaoNova" class="form-control" placeholder="">
+                                        <span asp-validation-for="NumeroCertidaoNova" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label asp-for="ResponsavelId" class="control-label">
+                                            Responsável
+                                            <a asp-controller="Responsavel" asp-action="Create" data-html="code_register_1" class="showcode">[Cadastrar]</a>
+                                        </label>
+                                        <select asp-for="ResponsavelId" class="form-control"
+                                                asp-items="@ViewBag.Responsaveis">
+                                            <option disabled selected>--- NENHUM ---</option>
+                                        </select>
+                                        <span asp-validation-for="ResponsavelId" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </aside>
             </div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DataNascimento" class="control-label"></label>
-                <input asp-for="DataNascimento" class="form-control" />
-                <span asp-validation-for="DataNascimento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NumeroCertidaoNova" class="control-label"></label>
-                <input asp-for="NumeroCertidaoNova" class="form-control" />
-                <span asp-validation-for="NumeroCertidaoNova" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CPF" class="control-label"></label>
-                <input asp-for="CPF" class="form-control" />
-                <span asp-validation-for="CPF" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ResponsavelId" class="control-label"></label>
-                <input asp-for="ResponsavelId" class="form-control" />
-                <span asp-validation-for="ResponsavelId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+        </section>
+    </main>
+</form>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

@@ -1,10 +1,10 @@
-﻿@model IEnumerable<AlunoViewModel>
+﻿@model IEnumerable<ResponsavelViewModel>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Alunos</h1>
+<h1>Responsáveis</h1>
 
 <p>
     <a asp-action="Create">Incluir Novo</a>
@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AlunoId)
+                @Html.DisplayNameFor(model => model.ResponsavelId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
@@ -22,13 +22,7 @@
                 @Html.DisplayNameFor(model => model.DataNascimento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NumeroCertidaoNova)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.CPF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ResponsavelId)
             </th>
             <th></th>
         </tr>
@@ -37,7 +31,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.AlunoId)
+                @Html.DisplayFor(modelItem => item.ResponsavelId)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
@@ -46,13 +40,7 @@
                 @Html.DisplayFor(modelItem => item.DataNascimento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NumeroCertidaoNova)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CPF)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ResponsavelId)
             </td>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
