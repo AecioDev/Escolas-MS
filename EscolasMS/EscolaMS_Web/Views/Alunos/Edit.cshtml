@@ -1,11 +1,11 @@
 ﻿@model AlunoViewModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Aluno";
 }
 
 <main role="main">
-    <div class="container  col-sm-6" style="margin-top: 20px;">        
+    <div class="container  col-sm-6" style="margin-top: 20px;">
         <form asp-controller="Alunos" asp-action="Edit" method="post">
             <main role="main">
                 <section class="container" style="margin-top: 10px">
@@ -72,9 +72,9 @@
                 <a class="float-right btn btn-outline-dark mt-1" asp-action="Index">Voltar</a>
             </div>
         </form>
-
-        @section Scripts {
-            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-        }
     </div>
 </main>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

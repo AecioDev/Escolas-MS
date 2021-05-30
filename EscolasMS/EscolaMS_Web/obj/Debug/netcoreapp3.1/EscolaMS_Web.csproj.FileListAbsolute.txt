@@ -323,3 +323,6 @@ E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Alunos\Edit.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Alunos\Details.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Alunos\Delete.cshtml.g.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Responsavel\Details.cshtml.g.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Responsavel\Edit.cshtml.g.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Responsavel\Delete.cshtml.g.cs

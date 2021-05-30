@@ -110,7 +110,6 @@ namespace EscolaMS_Web.Controllers
 
         // POST: AlunosController/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult Edit(AlunoViewModel aluno)
         {
             ViewBag.Responsaveis = _ResponsavelDb.GetAll().Select(r => new SelectListItem()

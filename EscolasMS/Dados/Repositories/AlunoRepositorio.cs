@@ -50,5 +50,10 @@ namespace EscolaMS_Dados.Repositories
         {
             _Db.Dispose();
         }
+
+        public Aluno GetAlunoByResp(int id)
+        {
+            return _Db.Set<Aluno>().Where(a => a.ResponsavelId == id).FirstOrDefault();
+        }
     }
 }

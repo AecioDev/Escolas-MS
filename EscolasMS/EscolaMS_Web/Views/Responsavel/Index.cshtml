@@ -7,7 +7,6 @@
 <main role="main">
     <div class="container" style="margin-top: 20px;">
         <h1>Responsáveis</h1>
-
         <p>
             <a class="btn btn-success" asp-action="Create"><i class="fas fa-plus"></i> Incluir Novo</a>
         </p>
@@ -46,9 +45,9 @@
                             @Html.DisplayFor(modelItem => item.CPF)
                         </td>
                         <td>
-                            @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
-                            @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }) |
-                            @Html.ActionLink("Remover", "Delete", new { /* id=item.PrimaryKey */ })
+                            @Html.ActionLink("Deletar", "Delete", new { id = item.ResponsavelId }, new { @class = "float-right btn btn-danger btn-sm mt-1 ml-1" })
+                            @Html.ActionLink("Ver", "Details", new { id = item.ResponsavelId }, new { @class = "float-right btn btn-primary btn-sm mt-1 ml-1 mr-1" })
+                            @Html.ActionLink("Editar", "Edit", new { id = item.ResponsavelId }, new { @class = "float-right btn btn-success btn-sm mt-1 mr-1" })
                         </td>
                     </tr>
                 }
