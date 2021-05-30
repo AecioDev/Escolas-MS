@@ -4,66 +4,69 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Alunos</h1>
-
-<p>
-    <a asp-action="Create">Incluir Novo</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.AlunoId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NumeroCertidaoNova)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CPF)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ResponsavelId)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AlunoId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumeroCertidaoNova)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CPF)
-            </td>
-            <td>
-                @if (item.Responsavel != null)
+<main role="main">
+    <div class="container" style="margin-top: 20px; max-width: 1540px;">
+        <h1>Alunos</h1>
+        <p>
+            <a class="btn btn-success" asp-action="Create"><i class="fas fa-plus"></i> Incluir Novo</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AlunoId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataNascimento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NumeroCertidaoNova)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CPF)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ResponsavelId)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
                 {
-                    @Html.DisplayFor(modelItem => item.Responsavel.Nome)
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlunoId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataNascimento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumeroCertidaoNova)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CPF)
+                        </td>
+                        <td>
+                            @if (item.Responsavel != null)
+                            {
+                                @Html.DisplayFor(modelItem => item.Responsavel.Nome)
+                            }
+                        </td>
+                        <td>
+                            @Html.ActionLink("Deletar", "Delete", new { id = item.AlunoId }, new { @class = "float-right btn btn-danger btn-sm mt-1 ml-1" })
+                            @Html.ActionLink("Ver", "Details", new { id = item.AlunoId }, new { @class = "float-right btn btn-primary btn-sm mt-1 ml-1 mr-1" })
+                            @Html.ActionLink("Editar", "Edit", new { id = item.AlunoId }, new { @class = "float-right btn btn-success btn-sm mt-1 mr-1" })
+                        </td>
+                    </tr>
                 }
-
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Remover", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+            </tbody>
+        </table>
+    </div>
+</main>

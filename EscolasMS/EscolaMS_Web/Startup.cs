@@ -16,6 +16,7 @@ using EscolaMS_Web.ViewModels;
 using AutoMapper;
 using EscolaMS_Domain.Interfaces;
 using EscolaMS_Dados.Repositories;
+using Microsoft.AspNetCore.Http;
 
 namespace EscolaMS_Web
 {
@@ -48,6 +49,20 @@ namespace EscolaMS_Web
 
             services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
             services.AddScoped<IResponsavelRepositorio, ResponsavelRepositorio>();
+
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            //Session Configuration
+            services.AddMemoryCache(); //Guarda os dados na memória
+            services.AddSession(options =>
+            {
+                //options.IdleTimeout //Tempo que o servidor espera antes de finalizar a sessão do usuário.
+                //options.IOTimeout //Tempo de espera do servidor pelo cliente 
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,10 +80,9 @@ namespace EscolaMS_Web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

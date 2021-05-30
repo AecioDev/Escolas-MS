@@ -34,9 +34,12 @@ namespace EscolaMS_Web.Controllers
         }
 
         // GET: AlunosController/Details/5
+        [HttpGet]
         public ActionResult Details(int id)
         {
-            return View();
+            var aluno = _alunoDb.GetById(id);
+            var viewAluno = _mapper.Map<Aluno, AlunoViewModel>(aluno);
+            return View(viewAluno);
         }
 
         // GET: AlunosController/Create
@@ -84,7 +87,7 @@ namespace EscolaMS_Web.Controllers
                 var alunoDomain = _mapper.Map<AlunoViewModel, Aluno>(aluno);
                 _alunoDb.Add(alunoDomain);
 
-                TempData["MSG_S"] = "Cadastro realizado com Sucesso!";
+                //TempData["MSG_S"] = "Cadastro realizado com Sucesso!";
                 return RedirectToAction(nameof(Index));
             }
 
@@ -94,43 +97,77 @@ namespace EscolaMS_Web.Controllers
         // GET: AlunosController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            ViewBag.Responsaveis = _ResponsavelDb.GetAll().Select(r => new SelectListItem()
+            {
+                Text = r.Nome,
+                Value = r.ResponsavelId.ToString()
+            }).ToList();
+
+            var aluno = _alunoDb.GetById(id);
+            var viewAluno = _mapper.Map<Aluno, AlunoViewModel>(aluno);
+            return View(viewAluno);
         }
 
         // POST: AlunosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(AlunoViewModel aluno)
         {
-            try
+            ViewBag.Responsaveis = _ResponsavelDb.GetAll().Select(r => new SelectListItem()
             {
+                Text = r.Nome,
+                Value = r.ResponsavelId.ToString()
+            }).ToList();
+
+            //Valida Idade Mínima
+            var AnoIdade = aluno.DataNascimento.Year;
+            if (DateTime.Now.Year - AnoIdade < 6)
+            {
+                ModelState.AddModelError("DataNascimento", "O Aluno deve ter no mínimo 6 anos de idade!");
+            }
+            else if (DateTime.Now.Year - AnoIdade < 18 && aluno.ResponsavelId == null)
+            {
+                ModelState.AddModelError("ResponsavelId", "Para aluno menor de 18 anos o Responsável deve ser informado!");
+            }
+
+            //Valida o Documento Informado
+            if (string.IsNullOrEmpty(aluno.NumeroCertidaoNova) && string.IsNullOrEmpty(aluno.CPF))
+            {
+                ModelState.AddModelError("NumeroCertidaoNova", "Informe o número da Certidão Nova ou do CPF do Aluno!");
+                ModelState.AddModelError("CPF", "Informe o número do CPF ou da Certidão Nova do Aluno!");
+            }
+
+            if (ModelState.IsValid)
+            {
+                var alunoDomain = _mapper.Map<AlunoViewModel, Aluno>(aluno);
+                _alunoDb.Update(alunoDomain);
+
+                //TempData["MSG_S"] = "Cadastro realizado com Sucesso!";
                 return RedirectToAction(nameof(Index));
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(aluno);
         }
 
         // GET: AlunosController/Delete/5
+        [HttpGet]
         public ActionResult Delete(int id)
         {
-            return View();
+            var aluno = _alunoDb.GetById(id);
+            var viewAluno = _mapper.Map<Aluno, AlunoViewModel>(aluno);
+            return View(viewAluno);
         }
 
         // POST: AlunosController/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+        public ActionResult DeleteConfirmed(int id)
+        {            
+            var aluno = _alunoDb.GetById(id);
+            _alunoDb.Remove(aluno);
+
+            return RedirectToAction(nameof(Index));
+         
         }
     }
 }

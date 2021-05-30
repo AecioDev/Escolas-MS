@@ -11,7 +11,6 @@ E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -320,3 +319,7 @@ E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Alunos\Index.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Responsavel\Index.cshtml.g.cs
 E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Responsavel\Create.cshtml.g.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Alunos\Edit.cshtml.g.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Alunos\Details.cshtml.g.cs
+E:\Projetos C#\Teste SGI\Escolas-MS\EscolasMS\EscolaMS_Web\obj\Debug\netcoreapp3.1\Razor\Views\Alunos\Delete.cshtml.g.cs

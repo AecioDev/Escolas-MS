@@ -1,0 +1,64 @@
+﻿@model AlunoViewModel
+
+@{
+    ViewData["Title"] = "Detalhes Aluno";
+}
+
+<main role="main">
+    <div class="container col-sm-6" style="margin-top: 20px;">
+        <h1>Detalhes do Aluno</h1>        
+        <hr />
+        <section class="container" style="margin-top: 10px">
+            <div class="row">
+                <aside>
+                    <div class="card">
+                        <article class="card-body">
+                            <dl class="row">
+                                <dt class="col-sm-4">
+                                    @Html.DisplayNameFor(model => model.AlunoId)
+                                </dt>
+                                <dd class="col-sm-8">
+                                    @Html.DisplayFor(model => model.AlunoId)
+                                </dd>
+                                <dt class="col-sm-4">
+                                    @Html.DisplayNameFor(model => model.Nome)
+                                </dt>
+                                <dd class="col-sm-8">
+                                    @Html.DisplayFor(model => model.Nome)
+                                </dd>
+                                <dt class="col-sm-4">
+                                    @Html.DisplayNameFor(model => model.DataNascimento)
+                                </dt>
+                                <dd class="col-sm-8">
+                                    @Html.DisplayFor(model => model.DataNascimento)
+                                </dd>
+                                <dt class="col-sm-4">
+                                    @Html.DisplayNameFor(model => model.NumeroCertidaoNova)
+                                </dt>
+                                <dd class="col-sm-8">
+                                    @Html.DisplayFor(model => model.NumeroCertidaoNova)
+                                </dd>
+                                <dt class="col-sm-4">
+                                    @Html.DisplayNameFor(model => model.CPF)
+                                </dt>
+                                <dd class="col-sm-8">
+                                    @Html.DisplayFor(model => model.CPF)
+                                </dd>
+                                <dt class="col-sm-4">
+                                    @Html.DisplayNameFor(model => model.ResponsavelId)
+                                </dt>
+                                <dd class="col-sm-8">
+                                    @Html.DisplayFor(model => model.ResponsavelId)
+                                </dd>
+                            </dl>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+        </section>        
+        <div>
+            <a class="float-right btn btn-outline-dark mt-1 mr-1" asp-action="Index">Voltar</a>            
+            @Html.ActionLink("Editar", "Edit", new { id = Model.AlunoId }, new { @class = "float-right btn btn-outline-success mt-1 mr-1" })
+        </div>
+    </div>
+</main>
