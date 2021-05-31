@@ -19,7 +19,8 @@ namespace EscolaMS_Web.ViewModels
         public string Nome { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens), ErrorMessageResourceName = "MSG_E001")]
-        [Display(Name = "Data de Nascimento")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Nascimento")]
         public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagens), ErrorMessageResourceName = "MSG_E001")]

@@ -20,7 +20,7 @@ namespace EscolaMS_Web.ViewModels
 
         [Required(ErrorMessageResourceType = typeof(Mensagens), ErrorMessageResourceName = "MSG_E001")]
         [DataType(DataType.Date)]
-        [Display(Name = "Data de Nascimento")]
+        [Display(Name = "Nascimento")]
         public DateTime DataNascimento { get; set; }
 
 
